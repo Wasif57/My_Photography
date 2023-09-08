@@ -1,0 +1,143 @@
+*{
+margin : 0;
+padding:0;
+font-family:sans-serif;
+box-sizing:border-box;
+background-color: black;
+}
+.back-video{
+	position: center;
+	right: 0;
+	left: 0;
+	z-index: -1;
+}
+h1{
+text-align:center;
+color:black;
+font-style: italic;
+padding:20px;
+background-color: deepskyblue;
+
+}
+.content{
+	text-align: center;
+} 
+.content h1 {
+	font-size: 160px;
+	color: #fff;
+	font-weight: 600;
+}
+.content a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 24px;
+	border: 2px solid #fff;
+	padding: 14px 70 px;
+	border-radius: 50px;
+	margin-top: 20px;
+}
+h4{
+	text-align: center;
+	color: whitesmoke;
+	font-style: italic;
+	padding: 10px;
+	background-color: darkblue;
+}
+footer{
+	text-align:center;
+color:black;
+font-style: italic;
+padding:20px;
+background-color: orange;
+}
+footer 1{
+text-align:left;
+color:black;
+font-style: italic;
+padding:20px;
+background-color: orange;
+}
+
+nav{
+background-color:orange;
+display:grid;
+place-items:center;
+}
+nav ul {
+list-style-type:none;
+}
+nav ul a{
+display:inline-block;
+padding:20px;
+text-decoration:none;
+color:#FFA500;
+transition:0.2s ease-in;
+font-size:18px;
+}
+nav ul a:hover{
+background-color:white;
+color:red;
+}
+nav ul a::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #009688;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+nav ul a:hover::after{
+	width: 100%;
+}
+.items {
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	padding:30px 20px;
+	grid-column-gap:20px;
+	grid-row-gap:30px;
+}
+.item img{
+	width:100%;
+	height: 300px;
+	object-fit: cover;
+	cursor: pointer;
+    transition: 0.2s ease;
+}
+.item img: hover{
+	transform: sacle(1.04);
+}
+.item h4{
+	padding: 5px;
+	text-align: center;
+}
+.item button{
+	padding: 5px 30px;
+	border: black;
+	outline: none;
+	background-color:greenyellow;
+	color: black;
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 20px;
+	display: block;
+	margin: 0 auto;
+    transition: 0.2s all;
+}
+.item button:hover{
+	transform: scale(1.08);
+}
+@media screen and (max width: 768px)
+{
+	.items{
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media (max-aspect-ratio:  16/9)
+{
+	.back-video{
+		width: auto;
+		height: 100%;
+	}
+}
